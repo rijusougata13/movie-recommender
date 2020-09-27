@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+ <head lang="en">
+  <title>dog_cat_predictor</title>
+  <meta charset="UTF-8">
+  <script language="JavaScript">
+      const tf = require("@tensorflow/tfjs");
+      const tfl = require("@tensorflow/tfjs-node");
+     const uploadJSONInput = document.getElementById('upload-json');
+const model =  tfl.loadModel(tf.io.browserFiles(
+ [uploadJSONInput.files[0]]));
+ alert(model);
+     var openFile = function(file) {
+    var input = file.target;
+
+    var reader = new FileReader();
+    reader.onload = function(){
+      var dataURL = reader.result;
+      var output = document.getElementById('output');
+      output.src = dataURL;
+    };
+    reader.readAsDataURL(input.files[0]);
+  };
+  
+  </script>
+<style type="text/css">
+body {
+  background-image: url('/static/img/download (2).jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+  </head>
+
+<body>
+  <p style="color:MediumSeaGreen;">
+    hello..welcome here i am fscity..upload a image and i will predict that if it is a dog or cat!
+  </p>
+  <p>
+<form   method="post" enctype=multipart/form-data>>
+    <p>
+    <input type="file" id="upload-json"/>
+</p>
+    <input type=file name=file accept='image/*'><br>
+    <input type="submit" onclick="openFile(event)" />
+</form>
+</p>
+</body>
+</html>

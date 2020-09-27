@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+ <head lang="en">
+  <title>dog_cat_predictor</title>
+  <meta charset="UTF-8">
+  <script language="JavaScript">
+     var openFile = function(file) {
+    var input = file.target;
+
+    var reader = new FileReader();
+    reader.onload = function(){
+      var dataURL = reader.result;
+      var output = document.getElementById('output');
+      output.src = dataURL;
+    };
+    reader.readAsDataURL(input.files[0]);
+  };
+
+  </script>
+<style type="text/css">
+body {
+  background-image: url('/static/img/download5.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+#parent {
+  display: table;
+  width: 100%;
+}
+#form_login {
+    left: 50%;
+    top: 50%;
+    margin-left: 40%;
+  margin-top: 10%;
+}
+    #button {
+    left: 1%;
+    top: 1%;
+    color: blueviolet;
+    position:relative;
+    margin-left: 7%;
+    margin-top: 5%;}
+#h1{
+  left: 40%;
+    top: 30%;
+    margin-left: 36%;
+    margin-top: 5%;
+  color: blue;
+}
+#h2{
+  left: 40%;
+    top: 30%;
+    margin-left: 36%;
+    margin-top: 5%;
+  color:red;
+}
+
+
+#source {
+    left: 1%;
+    top: 1%;
+    color: blueviolet;
+    position:relative;
+    margin-left: 43%;
+    margin-top: 4%;}
+
+</style>
+  </head>
+
+<body>
+  <h1 id='h1'>Movie          Recommender</h1>
+  <h2 id='h2'>  type the movie name you liked</h2>
+  <p>
+    <div id='parent'>
+<form  id="form_login" method="post" enctype=multipart/form-data>
+   <input type="text" name="fname" ><br>
+    <input id="button" type="submit" onclick="openFile(event)" />
+</form>
+</div>
+</p>
+<button id='source'> <a href="">Source Code</a></button>
+</body>
+</html>
