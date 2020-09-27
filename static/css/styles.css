@@ -36,7 +36,6 @@ header {
   margin-left: 60%;
 }
 .nav-links {
-  justify-content: space-around;
   list-style: none;
 }
 .nav-link {
@@ -137,22 +136,22 @@ input[type="submit"] {
     font-size: 18px;
   }
   .link1 {
-    margin-left: 10px;
+    margin-left: 5px;
   }
   .link2 {
-    margin-left: 10px;
+    margin-left: 5px;
   }
   .link3 {
-    margin-left: 10px;
+    margin-left: 5px;
   }
 }
 
 .link1 {
-  margin-left: 30px;
+  margin-left: 10px;
 }
 .link2 {
-  margin-left: 30px;
+  margin-left: 10px;
 }
 .link3 {
-  margin-left: 30px;
+  margin-left: 10px;
 }
