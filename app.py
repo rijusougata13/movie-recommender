@@ -59,12 +59,18 @@ def hello():
             if(i>6):
                 break
         try:
-            return render_template('submit.html',value1=movie_list[0],value2=movie_list[1],value3=movie_list[2],value4=movie_list[3],value5=movie_list[4])
+            return render_template('submit1.html',value1=movie_list[0],value2=movie_list[1],value3=movie_list[2],value4=movie_list[3],value5=movie_list[4])
         except:
-            return render_template('error.html')
+            return render_template('error1.html')
     else:
-        return render_template("hello.html")
+        return render_template("hello2.html")
+@app.route('/about.html',methods=['POST','GET'])
+def about():
+    return render_template("about.html")
 
+@app.route('/contact.html',methods=['POST','GET'])
+def contact():
+    return render_template("contact.html")
 if __name__ == '__main__':
     app.run(debug=True)
     port = int(os.environ.get('PORT', 5000))

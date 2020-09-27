@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script language="JavaScript">
+        var openFile = function(file) {
+       var input = file.target;
+   
+       var reader = new FileReader();
+       reader.onload = function(){
+         var dataURL = reader.result;
+         var output = document.getElementById('output');
+         output.src = dataURL;
+       };
+       reader.readAsDataURL(input.files[0]);
+     };
+   
+     </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../static/css/styles.css" />
+    <title>Movie recommender</title>
+  </head>
+  <body>
+    
+    <header>
+      <div class="logo-container">
+        <img class="logo-image" src="../static/img/logo3.png" alt="logo" />
+        <h4 class="logo">Fscty</h4>
+      </div>
+  <nav>
+        <ul class="nav-links">
+          <li class="link1"><a class="nav-link" id='link1' href="./about.html">about</a></li>
+          <li class="link2"><a class="nav-link"  id='link2' href="./contact.html">contact</a></li>
+          <li class="link3"><a class="nav-link"  id='link3' href="https://github.com/rijusougata13/movie-recommender">contribute</a></li>
+        </ul>
+      </nav> 
+    </header>
+    
+    <main>
+      <section class="presentation">
+        <div class="introduction">
+          <div class="intro-text">
+            <h1>Movie recommender</h1>
+            <p>find your favourite movies by clicking this button</p>
+          </div>
+          <form  id="form_login" method="post" enctype=multipart/form-data>
+          <div class="input-text">
+            <input type="text" id="fname" name="fname" placeholder="movie-name">
+            <input id='button' type="submit" value="Submit" onclick="openFile(event)">
+          </div>
+        
+        </form>
+        </div>
+        </div>
+      </section>
+      <img class="big-circle" src="../static/img/big-eclipse.svg" alt="" />
+      <img class="medium-circle" src="../static/img/mid-eclipse.svg" alt="" />
+      <img class="small-circle" src="../static/img/small-eclipse.svg" alt="" />
+    </main>
+  </body>
+</html>

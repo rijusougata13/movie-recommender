@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movie Recommender</title>
   <meta charset="UTF-8">
   <script language="JavaScript">
@@ -22,6 +23,7 @@ body {
   background-image: url('/static/img/download5.jpg');
   background-attachment: fixed;
   background-size: cover;
+  background-position: center center;
 }
 #parent {
   display: table;
@@ -39,6 +41,13 @@ body {
     color: blueviolet;
     position:relative;
     margin-left: 7%;
+    margin-top: 5%;}
+    #text {
+    left: 10%;
+    position: absolute;
+    top: 35%;
+    margin-left: 15%;
+    margin-right: 10%;
     margin-top: 5%;}
 #h1{
   left: 40%;
@@ -73,7 +82,7 @@ body {
   <p>
     <div id='parent'>
 <form  id="form_login" method="post" enctype=multipart/form-data>
-   <input type="text" name="fname" ><br>
+   <input id='text' type="text" name="fname" size="100" ><br>
     <input id="button" type="submit" onclick="openFile(event)" />
 </form>
 </div>

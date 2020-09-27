@@ -1,0 +1,158 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+header {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  height: 10vh;
+  align-items: center;
+}
+.logo-container,
+.nav-links {
+  margin-top: 5%;
+  display: flex;
+  filter: drop-shadow(0px 0px 1px black);
+}
+.logo {
+  margin-top: 5%;
+  font-weight: 400;
+  margin: 15px;
+  filter: drop-shadow(0px 2px 3px black);
+}
+.logo-container {
+  margin-top: 5%;
+  flex: 1;
+}
+.nav {
+  margin-top: 5%;
+  display: flex;
+  flex: 2;
+  margin-left: 60%;
+}
+.nav-links {
+  justify-content: space-around;
+  list-style: none;
+}
+.nav-link {
+  color: #5f5f79;
+  font-size: 18px;
+  text-decoration: none;
+  margin-left: 45%;
+}
+
+.presentation {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  min-height: 80vh;
+}
+.introduction {
+  flex: 1;
+}
+
+.intro-text h1 {
+  font-size: 44px;
+  font-weight: 500;
+  background: linear-gradient(to right, #494964, #6f6f89);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.intro-text p {
+  margin-top: 5px;
+  font-size: 22px;
+  color: #585772;
+}
+.background {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  size: 100px;
+}
+
+.big-circle {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: -1;
+  height: 80%;
+  opacity: 0.5;
+}
+
+.medium-circle {
+  position: absolute;
+  top: 30%;
+  right: 50%;
+  z-index: -1;
+  height: 60%;
+  opacity: 0.5;
+}
+
+.small-circle {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+  height: 20%;
+  opacity: 0.9;
+}
+input[type="text"],
+select,
+textarea {
+  margin-top: 30px;
+  width: 50%;
+  padding: 12px;
+  margin-left: 3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  margin-left: 5%;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 13px;
+  background-color: red;
+  top: 30%;
+}
+
+@media screen and (max-width: 1024px) {
+  .presentation {
+    flex-direction: column;
+  }
+  .intro-text h1 {
+    font-size: 30px;
+  }
+  .intro-text p {
+    font-size: 18px;
+  }
+  .link1 {
+    margin-left: 10px;
+  }
+  .link2 {
+    margin-left: 10px;
+  }
+  .link3 {
+    margin-left: 10px;
+  }
+}
+
+.link1 {
+  margin-left: 30px;
+}
+.link2 {
+  margin-left: 30px;
+}
+.link3 {
+  margin-left: 30px;
+}

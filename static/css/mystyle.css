@@ -1,0 +1,55 @@
+body {
+  background-image: url("/static/img/download5.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+#parent {
+  display: table;
+  width: 100%;
+}
+#form_login {
+  left: 50%;
+  top: 50%;
+  margin-left: 40%;
+  margin-top: 10%;
+}
+#button {
+  left: 1%;
+  top: 1%;
+  color: blueviolet;
+  position: relative;
+  margin-left: 7%;
+  margin-top: 5%;
+}
+#text {
+  left: 10%;
+  position: absolute;
+  top: 35%;
+  margin-left: 15%;
+  margin-right: 10%;
+  margin-top: 5%;
+}
+#h1 {
+  left: 40%;
+  top: 30%;
+  margin-left: 36%;
+  margin-top: 5%;
+  color: blue;
+}
+#h2 {
+  left: 40%;
+  top: 30%;
+  margin-left: 36%;
+  margin-top: 5%;
+  color: red;
+}
+
+#source {
+  left: 1%;
+  top: 1%;
+  color: blueviolet;
+  position: relative;
+  margin-left: 43%;
+  margin-top: 4%;
+}

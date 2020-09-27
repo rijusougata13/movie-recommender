@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html>
  <head lang="en">
-  <title>dog_cat_predictor</title>
+  <link rel="stylesheet" href="../static/css/mystyle.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Recommender</title>
   <meta charset="UTF-8">
   <script language="JavaScript">
-      const tf = require("@tensorflow/tfjs");
-      const tfl = require("@tensorflow/tfjs-node");
-     const uploadJSONInput = document.getElementById('upload-json');
-const model =  tfl.loadModel(tf.io.browserFiles(
- [uploadJSONInput.files[0]]));
- alert(model);
      var openFile = function(file) {
     var input = file.target;
 
@@ -21,29 +17,51 @@ const model =  tfl.loadModel(tf.io.browserFiles(
     };
     reader.readAsDataURL(input.files[0]);
   };
-  
+
   </script>
-<style type="text/css">
-body {
-  background-image: url('/static/img/download (2).jpeg');
-  background-attachment: fixed;
-  background-size: cover;
-}
-</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
 
 <body>
-  <p style="color:MediumSeaGreen;">
-    hello..welcome here i am fscity..upload a image and i will predict that if it is a dog or cat!
-  </p>
+  
+  <div class="wrapper">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <h1 id='h1'>Movie  Recommender</h1>
+  <h2 id='h2'>  type the movie name you liked</h2>
   <p>
-<form   method="post" enctype=multipart/form-data>>
-    <p>
-    <input type="file" id="upload-json"/>
-</p>
-    <input type=file name=file accept='image/*'><br>
-    <input type="submit" onclick="openFile(event)" />
+    <div id='parent'>
+<form  id="form_login" method="post" enctype=multipart/form-data>
+   <input id='text' type="text" name="fname" size="100" ><br>
+    <input id="button" type="submit" onclick="openFile(event)" />
 </form>
+</div>
 </p>
+<button id='source'> <a href="">Source Code</a></button>
+</div>
 </body>
 </html>
