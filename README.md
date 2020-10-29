@@ -1,9 +1,8 @@
-<<<<<<< HEAD
+
 # movie_recommender
 =======
 # movie-recommender
 
----
 # About->
 * This is a movie recommender system . this will help you to find similar type of movies you should watch from given input
 ---
